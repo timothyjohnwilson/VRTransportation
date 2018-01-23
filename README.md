@@ -10,3 +10,7 @@
 * [Unity](https://unity3d.com/)
 * [Unity Documentation](https://docs.unity3d.com/Manual/index.html)
 * [Blender](https://www.blender.org/)
+
+## Contributors
+* [blaare](https://github.com/blaare)
+* [quake0Day](https://github.com/quake0day)
