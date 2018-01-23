@@ -1,0 +1,246 @@
+fileFormatVersion: 2
+guid: 237acedbd179e294999869ca87725d5e
+timeCreated: 1516688661
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Cube_001
+    100002: DoorFrame_000
+    100004: DoorFrame_001
+    100006: DoorFrame_002
+    100008: //RootNode
+    100010: Moulding
+    100012: Moulding_001
+    100014: Moulding_002
+    100016: Moulding_003
+    100018: Moulding_004
+    100020: Moulding_005
+    100022: Moulding_006
+    100024: Moulding_007
+    100026: Moulding_008
+    100028: Moulding_009
+    100030: Moulding_010
+    100032: Moulding_011
+    100034: Moulding_012
+    100036: Moulding_013
+    100038: Moulding_014
+    100040: Hallway_Moulding
+    100042: Main_Structure
+    100044: Room_1_Moulding
+    100046: Room_1_Moulding_001
+    100048: Room_2_Door
+    100050: Room_2_Moulding
+    100052: Room_3_Door
+    100054: Room_3_Moulding
+    100056: Room_1_Door
+    100058: Room_2_Door_001
+    400000: Cube_001
+    400002: DoorFrame_000
+    400004: DoorFrame_001
+    400006: DoorFrame_002
+    400008: //RootNode
+    400010: Moulding
+    400012: Moulding_001
+    400014: Moulding_002
+    400016: Moulding_003
+    400018: Moulding_004
+    400020: Moulding_005
+    400022: Moulding_006
+    400024: Moulding_007
+    400026: Moulding_008
+    400028: Moulding_009
+    400030: Moulding_010
+    400032: Moulding_011
+    400034: Moulding_012
+    400036: Moulding_013
+    400038: Moulding_014
+    400040: Hallway_Moulding
+    400042: Main_Structure
+    400044: Room_1_Moulding
+    400046: Room_1_Moulding_001
+    400048: Room_2_Door
+    400050: Room_2_Moulding
+    400052: Room_3_Door
+    400054: Room_3_Moulding
+    400056: Room_1_Door
+    400058: Room_2_Door_001
+    2100000: Material_001
+    2100002: DoorFrame
+    2100004: HallwayWalls
+    2100006: Room_1
+    2100008: Roojm_2
+    2100010: Room_2
+    2100012: Room_3
+    2100014: Ceiling
+    2100016: Floor
+    2100018: Moulding
+    2300000: Cube_001
+    2300002: DoorFrame_000
+    2300004: DoorFrame_001
+    2300006: DoorFrame_002
+    2300008: Moulding
+    2300010: Moulding_001
+    2300012: Moulding_002
+    2300014: Moulding_003
+    2300016: Moulding_004
+    2300018: Moulding_005
+    2300020: Moulding_006
+    2300022: Moulding_007
+    2300024: Moulding_008
+    2300026: Moulding_009
+    2300028: Moulding_010
+    2300030: Moulding_011
+    2300032: Moulding_012
+    2300034: Moulding_013
+    2300036: Moulding_014
+    2300038: Hallway_Moulding
+    2300040: Main_Structure
+    2300042: Room_1_Moulding
+    2300044: Room_1_Moulding_001
+    2300046: Room_2_Door
+    2300048: Room_2_Moulding
+    2300050: Room_3_Door
+    2300052: Room_3_Moulding
+    2300054: Room_1_Door
+    2300056: Room_2_Door_001
+    3300000: Cube_001
+    3300002: DoorFrame_000
+    3300004: DoorFrame_001
+    3300006: DoorFrame_002
+    3300008: Moulding
+    3300010: Moulding_001
+    3300012: Moulding_002
+    3300014: Moulding_003
+    3300016: Moulding_004
+    3300018: Moulding_005
+    3300020: Moulding_006
+    3300022: Moulding_007
+    3300024: Moulding_008
+    3300026: Moulding_009
+    3300028: Moulding_010
+    3300030: Moulding_011
+    3300032: Moulding_012
+    3300034: Moulding_013
+    3300036: Moulding_014
+    3300038: Hallway_Moulding
+    3300040: Main_Structure
+    3300042: Room_1_Moulding
+    3300044: Room_1_Moulding_001
+    3300046: Room_2_Door
+    3300048: Room_2_Moulding
+    3300050: Room_3_Door
+    3300052: Room_3_Moulding
+    3300054: Room_1_Door
+    3300056: Room_2_Door_001
+    4300000: Moulding_006
+    4300002: Moulding_005
+    4300004: Moulding_004
+    4300006: Moulding_003
+    4300008: Moulding_002
+    4300010: Moulding_001
+    4300012: Moulding
+    4300014: DoorFrame_002
+    4300016: DoorFrame_000
+    4300018: DoorFrame_001
+    4300020: Cube_001
+    4300022: Moulding_010
+    4300024: Moulding_009
+    4300026: Moulding_008
+    4300028: Moulding_007
+    4300030: Moulding_014
+    4300032: Moulding_013
+    4300034: Moulding_012
+    4300036: Moulding_011
+    4300038: Room_3_Moulding
+    4300040: Room_2_Moulding
+    4300042: Room_1_Moulding
+    4300044: Hallway_Moulding
+    4300046: Room_2_Door
+    4300048: Room_1_Moulding_001
+    4300050: Room_3_Door
+    4300052: Main_Structure
+    4300054: Room_1_Door
+    4300056: Room_2_Door_001
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
