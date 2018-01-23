@@ -13,4 +13,4 @@
 
 ## Contributors
 * [blaare](https://github.com/blaare)
-* [quake0Day](https://github.com/quake0day)
+* [quake0day](https://github.com/quake0day)
