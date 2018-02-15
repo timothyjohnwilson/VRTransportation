@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Created using https://www.youtube.com/watch?v=3MoHJtBnn2U
 public class WaterDistortion : MonoBehaviour {
 
 	public float power 		= 3;
@@ -18,6 +19,7 @@ public class WaterDistortion : MonoBehaviour {
 		Distort ();
 	}
 	
+	// Effect the changing of the mesh
 	// Update is called once per frame
 	void Update () {
 		Distort ();
