@@ -14,7 +14,7 @@ public class TeleporterLine : MonoBehaviour {
 
 	public void initialize()
 	{
-		LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
+		LineRenderer lineRenderer = gameObject.GetComponent<LineRenderer>();
 		lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
 		lineRenderer.widthMultiplier = 0.05f;
 		lineRenderer.positionCount = 2;
@@ -29,15 +29,14 @@ public class TeleporterLine : MonoBehaviour {
 		lineRenderer.colorGradient = gradient;
 	}
 
-	public void Display(Vector3 teleportPosition)
-	{
+	public void Display(Vector3 teleportPosition){
 		LineRenderer lineRenderer = GetComponent<LineRenderer>();
 		var t = Time.time;
 		Debug.Log (hand.transform.position);
 		Debug.Log (Teleporter.transform.position);
 		Vector3 controllerPosition = new Vector3 (hand.transform.position.x, hand.transform.position.y, hand.transform.position.z);
 		Vector3[] positions = { controllerPosition, teleportPosition };
-		lineRenderer.SetPositions(positions);
+		lineRenderer.SetPositions(positioSns);
 	}
 
 	public void Hide(){

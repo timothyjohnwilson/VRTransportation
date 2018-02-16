@@ -9,6 +9,9 @@ public class Teleporter : MonoBehaviour {
 	public Transform Controller;
 	public float RayLength = 500f;
 	public TeleporterLine teleporterLine;
+	public bool allowVertical = false;
+	public float platformCheckDistance = 2;
+	public float platformHeightDistance = 3;
 	private bool pressed;
 	private CharacterController characterController;
 
@@ -37,12 +40,12 @@ public class Teleporter : MonoBehaviour {
 		} else if (OVRInput.GetUp (OVRInput.RawButton.A)) {
 			pressed = false;
 			teleporterLine.Hide ();
-			if(hit.collider.tag == "Ground")
+			if(hit.collider.tag == "Ground" && checkPositions(hit))
 				transform.position = new Vector3(hit.point.x, hit.point.y + characterController.height, hit.point.z);
 		}
 		//Line Handling
 		if (pressed) {
-			if (detected && hit.collider.tag == "Ground") {
+			if (detected && hit.collider.tag == "Ground" && checkPositions(hit)) {
 				teleporterLine.updateColor (Color.green, Color.green);
 				TeleportMarker.SetActive (true);
 				TeleportMarker.transform.position = hit.point;
@@ -59,6 +62,19 @@ public class Teleporter : MonoBehaviour {
 			TeleportMarker.SetActive (false);
 		}
 			
+	}
+
+	public bool checkPositions( RaycastHit hit){
+		if (Physics.CheckSphere (new Vector3 (hit.point.x + platformCheckDistance, hit.point.y- platformHeightDistance, hit.point.z + platformCheckDistance),1)) {
+			if (Physics.CheckSphere (new Vector3 (hit.point.x - platformCheckDistance, hit.point.y- platformHeightDistance, hit.point.z - platformCheckDistance),1)) {
+				if (Physics.CheckSphere (new Vector3 (hit.point.x + platformCheckDistance, hit.point.y- platformHeightDistance, hit.point.z - platformCheckDistance),1)) {
+					if (Physics.CheckSphere (new Vector3 (hit.point.x - platformCheckDistance, hit.point.y - platformHeightDistance, hit.point.z + platformCheckDistance), 1)) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
 	}
 		
 }
