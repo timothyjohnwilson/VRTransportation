@@ -18,5 +18,5 @@
 * [quake0day](https://github.com/quake0day)
 
 #### Known Bugs
-* Teleportation on Level 3, when game built, does not work.
-* Similar to the first bug, when user presses the "A" Button on the controller to teleport, the beam texture is missing.
+* No known Bugs
+
