@@ -754,6 +754,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.002116, y: 9.997787, z: 2.0000005}
   m_Center: {x: 0.00000047683713, y: 0.0011069777, z: -1.5731096e-17}
+--- !u!1 &561808100 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 2}
+  m_PrefabInternal: {fileID: 571719085}
 --- !u!1001 &571719085
 Prefab:
   m_ObjectHideFlags: 0
@@ -1174,10 +1178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6133d24ca0a62aa4db12b5417b0ab38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  c1: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  c1: {r: 1, g: 0, b: 0, a: 1}
   c2: {r: 1, g: 0, b: 0, a: 1}
-  Teleporter: {fileID: 270613241}
-  hand: {fileID: 784898582}
+  Teleporter: {fileID: 561808100}
+  hand: {fileID: 1267544787}
 --- !u!120 &784898585
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1372,9 +1376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb843ec7240ee74f8484956970d3720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 4
-  scale: 2
-  timeScale: 0.25
+  power: 3
+  scale: 1
+  timeScale: 0.5
 --- !u!4 &993556652
 Transform:
   m_ObjectHideFlags: 0
@@ -1556,10 +1560,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeleportMarker: {fileID: 270613241}
   Controller: {fileID: 784898583}
-  RayLength: 25
+  RayLength: 500
   teleporterLine: {fileID: 784898584}
   allowVertical: 0
-  platformCheckDistance: 1.5
+  platformCheckDistance: 1
   platformHeightDistance: 1
 --- !u!1001 &1284559453
 Prefab:
@@ -1898,7 +1902,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1c3794d63bac39640b4c077282b8c2d2, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 1c3794d63bac39640b4c077282b8c2d2, type: 3}
       propertyPath: m_Materials.Array.data[0]

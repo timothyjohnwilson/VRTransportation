@@ -36,7 +36,7 @@ public class TeleporterLine : MonoBehaviour {
 		Debug.Log (Teleporter.transform.position);
 		Vector3 controllerPosition = new Vector3 (hand.transform.position.x, hand.transform.position.y, hand.transform.position.z);
 		Vector3[] positions = { controllerPosition, teleportPosition };
-		lineRenderer.SetPositions(positioSns);
+		lineRenderer.SetPositions(positions);
 	}
 
 	public void Hide(){
