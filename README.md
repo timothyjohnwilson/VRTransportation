@@ -11,6 +11,8 @@
 * [Unity Documentation](https://docs.unity3d.com/Manual/index.html)
 * [Blender](https://www.blender.org/)
 
-## Contributors
+## Author
 * [blaare](https://github.com/blaare)
+
+## Advisor
 * [quake0day](https://github.com/quake0day)
