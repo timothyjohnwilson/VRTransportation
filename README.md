@@ -10,6 +10,7 @@
 * [Unity](https://unity3d.com/)
 * [Unity Documentation](https://docs.unity3d.com/Manual/index.html)
 * [Blender](https://www.blender.org/)
+* [Oculus SDK](https://developer.oculus.com/)
 
 ## Author
 * [blaare](https://github.com/blaare)
