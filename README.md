@@ -17,7 +17,3 @@
 
 ## Advisor
 * [quake0day](https://github.com/quake0day)
-
-#### Known Bugs
-* No known Bugs
-
