@@ -9,9 +9,8 @@ public class CollideToNextLevel : MonoBehaviour {
 	public int sceneNumber;
 	AsyncOperation asyncLoadLevel;
 	void OnCollisionEnter(Collision collision){
-
+        Debug.Log(gameObject.tag);
 		if (collision.gameObject.tag == tagName) {
-			//asyncLoadLevel = SceneManager.LoadSceneAsync (sceneNumber, LoadSceneMode.Single);
 			SceneManager.LoadScene(sceneNumber);
 		}
 	}
