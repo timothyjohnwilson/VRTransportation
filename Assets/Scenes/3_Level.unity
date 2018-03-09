@@ -1784,7 +1784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TeleportMarker: {fileID: 270613241}
   Controller: {fileID: 784898583}
-  RayLength: 500
+  RayLength: 40
   teleporterLine: {fileID: 784898584}
   allowVertical: 0
   platformCheckDistance: 1

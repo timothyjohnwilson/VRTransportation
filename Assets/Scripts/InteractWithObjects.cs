@@ -6,43 +6,60 @@ public class InteractWithObjects : MonoBehaviour {
 
 	public float offset;
 	private GameObject collidedObject;
-	private GameObject newObjectOrigin;
+    private Rigidbody collidedRigidbody;
 	private bool holding;
-	void Update () {
-		if (holding) {
-			collidedObject.transform.position = new Vector3(newObjectOrigin.transform.position.x,newObjectOrigin.transform.position.y,newObjectOrigin.transform.position.z);
-			collidedObject.transform.eulerAngles = newObjectOrigin.transform.eulerAngles; 
-			if (OVRInput.GetDown (OVRInput.RawButton.A)) {
-				LetGo ();
-				GetComponent<Collider> ().enabled = true;
+    private FixedJoint fixedJoint;
+    private bool touching;
+    public float deadZoneTime;
+    private float bufferTime;
+    private Rigidbody rigidbody;
+
+
+    private void Start(){
+        fixedJoint = GetComponent<FixedJoint>();
+        touching = false;
+        holding = false;
+        rigidbody = GetComponentInParent<Rigidbody>();
+    }
+    void Update () {
+        
+        if (touching && !holding){
+            if (OVRInput.GetDown(OVRInput.RawButton.A)){
+                GrabObject();
+            }
+        }
+		else if (holding) {
+		    if (OVRInput.GetDown (OVRInput.RawButton.A)) {
+		 		LetGo ();
 			}
 		}
-			
+			Debug.Log(rigidbody.velocity);
 	}
 
-	void OnCollisionStay(Collision collision){
-		if (OVRInput.GetDown (OVRInput.RawButton.A)) {
-			GrabObject (collision);
-		}
+	void OnCollisionEnter(Collision collision){
+        touching = true;
+        collidedObject = collision.gameObject;
+        bufferTime = Time.realtimeSinceStartup + deadZoneTime;
 	}
 
-	void LetGo(){
-		collidedObject.GetComponent<Rigidbody> ().useGravity = true;
-		collidedObject.GetComponent<Collider> ().enabled = true;
+    void OnCollisionExit(Collision collision){
+        if(!holding)
+            touching = Time.realtimeSinceStartup > bufferTime;
+    }
+
+    void LetGo(){
 		holding = false;
-		GetComponent<Collider> ().enabled = false;
-		Destroy (newObjectOrigin);
+        touching = false;
+        fixedJoint.connectedBody = null;
+        collidedObject.GetComponent<Collider>().enabled = true;
+        collidedRigidbody.AddForce(rigidbody.velocity);
+        Debug.Log(rigidbody.velocity);
+    }
 
-	}
-
-	void GrabObject(Collision collision){
-		collidedObject = collision.gameObject;
-		collidedObject.GetComponent<Rigidbody> ().useGravity = false;
-		collidedObject.GetComponent<Collider> ().enabled = false;
-		holding = true;
-		newObjectOrigin = new GameObject ("ObjectPivot");
-		newObjectOrigin.transform.SetParent (gameObject.transform);
-		newObjectOrigin.transform.eulerAngles = transform.eulerAngles;
-		newObjectOrigin.transform.localPosition = new Vector3(0, 0, offset);
+	void GrabObject(){
+        holding = true;
+        collidedRigidbody = collidedObject.GetComponent<Rigidbody>();
+        collidedObject.GetComponent<Collider>().enabled = false;
+        fixedJoint.connectedBody = collidedRigidbody;
 	}
 }
