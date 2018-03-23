@@ -5,6 +5,7 @@ using UnityEngine;
 public class InteractWithObjects : MonoBehaviour {
 
 	public float offset;
+    public float maxDistance;
 	private GameObject collidedObject;
     private Rigidbody collidedRigidbody;
 	private bool holding;
@@ -13,6 +14,7 @@ public class InteractWithObjects : MonoBehaviour {
     public float deadZoneTime;
     private float bufferTime;
     private Rigidbody rigidbody;
+
 
 
     private void Start(){
@@ -29,14 +31,16 @@ public class InteractWithObjects : MonoBehaviour {
             }
         }
 		else if (holding) {
-		    if (OVRInput.GetDown (OVRInput.RawButton.A)) {
+            
+		    if (OVRInput.GetDown (OVRInput.RawButton.A) || !CheckDistance()) {
 		 		LetGo ();
 			}
-		}
-			Debug.Log(rigidbody.velocity);
+		} 
+		
 	}
 
 	void OnCollisionEnter(Collision collision){
+        Debug.Log("Collision!!");
         touching = true;
         collidedObject = collision.gameObject;
         bufferTime = Time.realtimeSinceStartup + deadZoneTime;
@@ -53,6 +57,8 @@ public class InteractWithObjects : MonoBehaviour {
         fixedJoint.connectedBody = null;
         collidedObject.GetComponent<Collider>().enabled = true;
         collidedRigidbody.AddForce(rigidbody.velocity);
+        collidedObject = null;
+        collidedRigidbody = null;
         Debug.Log(rigidbody.velocity);
     }
 
@@ -62,4 +68,10 @@ public class InteractWithObjects : MonoBehaviour {
         collidedObject.GetComponent<Collider>().enabled = false;
         fixedJoint.connectedBody = collidedRigidbody;
 	}
+
+    public bool CheckDistance()
+    {
+        return Vector3.Distance(transform.position, collidedObject.transform.position) < maxDistance; ;
+        
+    }
 }
