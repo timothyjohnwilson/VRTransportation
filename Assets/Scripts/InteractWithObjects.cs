@@ -40,10 +40,10 @@ public class InteractWithObjects : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision){
-        Debug.Log("Collision!!");
-        touching = true;
-        collidedObject = collision.gameObject;
-        bufferTime = Time.realtimeSinceStartup + deadZoneTime;
+        //Debug.Log("Collision!!");
+        touching        = true;
+        collidedObject  = collision.gameObject;
+        bufferTime      = Time.realtimeSinceStartup + deadZoneTime;
 	}
 
     void OnCollisionExit(Collision collision){
@@ -52,21 +52,17 @@ public class InteractWithObjects : MonoBehaviour {
     }
 
     void LetGo(){
-		holding = false;
-        touching = false;
-        fixedJoint.connectedBody = null;
+		holding                                         = false;
+        touching                                        = false;
+        fixedJoint.connectedBody                        = null;
         collidedObject.GetComponent<Collider>().enabled = true;
-        collidedRigidbody.AddForce(rigidbody.velocity);
-        collidedObject = null;
-        collidedRigidbody = null;
-        Debug.Log(rigidbody.velocity);
     }
 
 	void GrabObject(){
-        holding = true;
-        collidedRigidbody = collidedObject.GetComponent<Rigidbody>();
+        holding                                         = true;
+        collidedRigidbody                               = collidedObject.GetComponent<Rigidbody>();
         collidedObject.GetComponent<Collider>().enabled = false;
-        fixedJoint.connectedBody = collidedRigidbody;
+        fixedJoint.connectedBody                        = collidedRigidbody;
 	}
 
     public bool CheckDistance()
